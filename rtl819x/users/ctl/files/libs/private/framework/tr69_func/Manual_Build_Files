@@ -1,0 +1,20 @@
+OBJS += \
+tr69_func_common.o\
+tr181_wifi.o \
+wifi_adapter_driver_realtek.o \
+libnetlink.o \
+act_moca.o \
+act_eth_rtl.o \
+act_vlan_rtl.o \
+act_bridge.o \
+act_dhcpv4.o \
+act_intf_stack.o \
+act_l3_local.o \
+act_ip.o \
+act_zconf_ext.o \
+act_rlogin.o \
+ifaddrs.o \
+md5.o \
+aei_rut_password.o \
+aei_md5_encode.o \
+

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+while sleep 10
+do
+DataCenterCHECK=`ps -aux | grep data_center | wc -l`
+
+if  [ $DataCenterCHECK -le 1 ] ; then
+    echo "data_center not running." 
+	killall dropbear
+	killall udhcpc
+	killall nmbd
+	killall mDNSResponderPosix
+	killall zero_conf_vz
+	killall zero_conf_telus
+	killall zconf.sh
+	killall clinkd
+	killall cli 
+	data_center &
+fi
+done
+
+

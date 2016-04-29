@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<Object name="Device" profile="tr69_func_DeviceObject.c">
+  <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="32" notification="0" name="RootDataModelVersion"/>
+  <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="0" notification="1" name="InterfaceStackNumberOfEntries"/>
+  <Parameter type="string" specSource="TR98" profile="Baseline:1" writable="0" readable="1" nosave="1" default="" maxLength="1024" notification="0" name="DeviceSummary"/>
+  <Object name="DeviceInfo" profile="tr69_func_DeviceInfoObject.c">
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="Actiontec" maxLength="64" notification="0" name="Manufacturer"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="6" notification="0" name="ManufacturerOUI"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="64" notification="0" name="ModelName"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="WCB3000" maxLength="256" notification="0" name="Description"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="64" notification="0" name="ProductClass"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="64" notification="0" name="SerialNumber"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="64" notification="0" name="HardwareVersion"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="64" notification="0" name="SoftwareVersion"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="64" notification="0" name="AdditionalHardwareVersion"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="64" notification="0" name="AdditionalSoftwareVersion"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="1.0" maxLength="16" notification="0" name="SpecVersion"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" default="ATEC.VER" maxLength="64" notification="0" name="ProvisioningCode"/>
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="UpTime"/>
+    <Parameter type="dateTime" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0001-01-01T00:00:00Z" notification="0" name="FirstUseDate"/>
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="VendorConfigFileNumberOfEntries"/>
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="SupportedDataModelNumberOfEntries"/>
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="ProcessorNumberOfEntries"/>
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="VendorLogFileNumberOfEntries"/>
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="LocationNumberOfEntries"/>
+    <Object name="VendorConfigFile" profile="tr69_func_VendorConfigFileObject.c">
+      <Instance size="0" writable="1" readable="1">
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" maxLength="64" notification="0" name="Alias"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="64" notification="0" name="Name"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="16" notification="0" name="Version"/>
+        <Parameter type="dateTime" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="Date"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="256" notification="0" name="Description"/>
+      </Instance>
+    </Object>
+  </Object>
+  <Object name="ManagementServer" profile="tr69_func_ManagementServerObject.c">
+    <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="true" notification="0" name="EnableCWMP"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" default="http://xatechdmw.xdev.motive.com/cwmpWeb/CPEMgt" maxLength="256" notification="0" name="URL"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" default="admin" maxLength="256" notification="0" name="Username"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" default="newVOLUser1" maxLength="256" notification="0" name="Password"/>
+    <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="1" readable="1" default="true" notification="0" name="PeriodicInformEnable"/>
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="1" readable="1" default="300" minValue="1" maxValue="4294967295" notification="0" name="PeriodicInformInterval"/>
+    <Parameter type="dateTime" specSource="TR181" profile="Baseline:1" writable="1" readable="1" default="" notification="0" name="PeriodicInformTime"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="" maxLength="32" notification="0" name="ParameterKey"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="" maxLength="256" notification="0" name="ConnectionRequestURL"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" default="admin" maxLength="256" notification="0" name="ConnectionRequestUsername"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" default="newVOLUser1" maxLength="256" notification="0" name="ConnectionRequestPassword"/>
+    <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="1" readable="1" default="" notification="0" name="UpgradesManaged"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="256" notification="0" name="KickURL"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="256" notification="0" name="DownloadProgressURL"/>
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" notification="0" name="DefaultActiveNotificationThrottle"/>
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="5" notification="0" name="CWMPRetryMinimumWaitInterval"/>
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="2000" notification="0" name="CWMPRetryIntervalMultiplier"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" default="" maxLength="256" notification="0" name="UDPConnectionRequestAddress"/>
+    <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="1" readable="1" default="" notification="0" name="STUNEnable"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" maxLength="256" notification="0" name="STUNServerAddress"/>
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" notification="0" name="STUNServerPort"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" maxLength="256" notification="0" name="STUNUsername"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" maxLength="256" notification="0" name="STUNPassword"/>
+    <Parameter type="int" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="1" default="" notification="0" name="STUNMaximumKeepAlivePeriod"/>
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="1" default="" notification="0" name="STUNMinimumKeepAlivePeriod"/>
+    <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="0" readable="1" default="" notification="0" name="NATDetected"/>
+    <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="0" readable="1" default="" notification="0" name="AliasBasedAddressing"/>
+    <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" maxLength="256" notification="0" name="InstanceMode"/>
+    <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="1" readable="1" default="" notification="0" name="AutoCreateInstances"/>
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="1" default="0" notification="0" name="ManageableDeviceNumberOfEntries"/>
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="1" default="0" notification="0" name="EmbeddedDeviceNumberOfEntries"/>
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="1" default="0" notification="0" name="VirtualDeviceNumberOfEntries"/>
+    <Object name="ManageableDevice" profile="tr69_func_ManageableDeviceObject.c">
+      <Instance size="0" writable="1" readable="1">
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" maxLength="64" notification="0" name="Alias"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="6" notification="0" name="ManufacturerOUI"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="64" notification="0" name="SerialNumber"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="64" notification="0" name="ProductClass"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="1024" notification="0" name="Host"/>
+      </Instance>
+    </Object>
+  </Object>
+  <Object name="MoCA" profile="tr69_func_DeviceMoCAObject.c">
+    <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="0" notification="0" name="InterfaceNumberOfEntries"/>
+    <Object name="Interface" profile="tr69_func_MoCAInterfaceObject.c">
+      <Instance size="0" writable="1" readable="1">
+        <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="false" notification="0" name="Enable"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="64" notification="0" name="Status"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" maxLength="64" notification="0" name="Alias"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="64" notification="0" name="Name"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="LastChange"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" maxLength="64" notification="0" name="LowerLayers"/>
+        <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" notification="0" name="Upstream"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="17" notification="0" name="MACAddress"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="64" notification="0" name="FirmwareVersion"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="MaxBitRate"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="MaxIngressBW"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="MaxEgressBW"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="64" notification="0" name="HighestVersion"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" maxLength="64" notification="0" name="CurrentVersion"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="NetworkCoordinator"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="NodeID"/>
+        <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="MaxNodes"/>
+        <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" notification="0" name="PreferredNC"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="BackupNC"/>
+        <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="false" notification="0" name="PrivacyEnabledSetting"/>
+        <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="false" notification="0" name="PrivacyEnabled"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="FreqCapabilityMask"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" notification="0" name="FreqCurrentMaskSetting"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="FreqCurrentMask"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="CurrentOperFreq"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="LastOperFreq"/>
+        <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" maxLength="17" notification="0" name="KeyPassphrase"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" notification="0" name="TxPowerLimit"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" notification="0" name="PowerCntlPhyTarget"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" notification="0" name="BeaconPowerLimit"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="NetworkTabooMask"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="NodeTabooMask"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="TxBcastRate"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="TxBcastPowerReduction"/>
+        <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="false" notification="0" name="QAM256Capable"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="PacketAggregationCapability"/>
+        <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="AssociatedDeviceNumberOfEntries"/>
+        <Object name="Stats" profile="tr69_func_MoCAInterfaceStatObject.c">
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="BytesSent"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="BytesReceived"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="PacketsSent"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="PacketsReceived"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="ErrorsSent"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="ErrorsReceived"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="UnicastPacketsSent"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="UnicastPacketsReceived"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="DiscardPacketsSent"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="DiscardPacketsReceived"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="MulticastPacketsSent"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="MulticastPacketsReceived"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="BroadcastPacketsSent"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="BroadcastPacketsReceived"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="UnknownProtoPacketsReceived"/>
+        </Object>
+        <Object name="QoS" profile="tr69_func_MoCAQoSObject.c">
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="EgressNumFlows"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="IngressNumFlows"/>
+          <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="FlowStatsNumberOfEntries"/>
+          <Object name="FlowStats" profile="tr69_func_MoCAQoSFlowStatObject.c">
+            <Instance size="0" writable="1" readable="1">
+              <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="FlowID"/>
+              <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" maxLength="17" notification="0" name="PacketDA"/>
+              <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="MaxRate"/>
+              <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="MaxBurstSize"/>
+              <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="LeaseTime"/>
+              <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="LeaseTimeLeft"/>
+              <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="FlowPackets"/>
+            </Instance>
+          </Object>
+        </Object>
+        <Object name="AssociatedDevice" profile="tr69_func_MoCAAssociatedDevObject.c">
+          <Instance size="0" writable="1" readable="1">
+            <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" maxLength="17" notification="0" name="PacketDA"/>
+            <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="NodeID"/>
+            <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="PreferredNC"/>
+            <Parameter type="string" specSource="TR181" profile="Baseline:1" writable="1" readable="1" nosave="0" default="" maxLength="64" notification="0" name="HighestVersion"/>
+            <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="PHYTxRate"/>
+            <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="PHYRxRate"/>
+            <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="TxPowerControlReduction"/>
+            <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="RxPowerLevel"/>
+            <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="TxBcastRate"/>
+            <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="RxBcastPowerLevel"/>
+            <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="TxPackets"/>
+            <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="RxPackets"/>
+            <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="RxErroredAndMissedPackets"/>
+            <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="QAM256Capable"/>
+            <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="PacketAggregationCapability"/>
+            <Parameter type="unsignedInt" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="1" default="0" notification="0" name="RxSNR"/>
+            <Parameter type="boolean" specSource="TR181" profile="Baseline:1" writable="0" readable="1" nosave="0" default="" notification="0" name="Active"/>
+          </Instance>
+        </Object>
+      </Instance>
+    </Object>
+  </Object>
+</Object>

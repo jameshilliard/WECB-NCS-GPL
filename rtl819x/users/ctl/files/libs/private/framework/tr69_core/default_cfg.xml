@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Object name="InternetGatewayDevice" data_size="28" framework_xml_version="">
+  <Parameter name="DeviceSummary" acl="ReadOnly" nosave="1" type="string" maxLength="1024" notification="0"></Parameter>
+  <Parameter name="LANDeviceNumberOfEntries" acl="ReadOnly" nosave="0" type="unsignedInt" notification="1">1</Parameter>
+  <Parameter name="WANDeviceNumberOfEntries" acl="ReadOnly" nosave="0" type="unsignedInt" notification="1">1</Parameter>
+  <Parameter name="X_AEI_COM_Physical_WAN" acl="ReadWrite" nosave="0" type="string" notification="0">Ethernet</Parameter>
+  <Parameter name="ACTIPv6_LANDeviceNumberOfEntries" acl="ReadOnly" nosave="0" type="unsignedInt" notification="1">1</Parameter>
+  <Parameter name="ACTIPv6_WANDeviceNumberOfEntries" acl="ReadOnly" nosave="0" type="unsignedInt" notification="1">1</Parameter>
+  <Parameter name="ACTIPv6_X_AEI_COM_Physical_WAN" acl="ReadWrite" nosave="0" type="string" notification="0">()</Parameter>
+  <Object name="WANDevice" data_size="0">
+    <Instance size="1" acl="ReadWrite" nosave="0" data_size="12">
+      <Parameter name="WANConnectionNumberOfEntries" acl="ReadOnly" nosave="0" type="unsignedInt" notification="1">1</Parameter>
+      <Parameter name="WANMoCAInterfaceNumberOfEntries" acl="ReadOnly" nosave="0" type="unsignedInt" notification="1">1</Parameter>
+      <Parameter name="X_ACTIONTEC_BridgeMode" acl="ReadWrite" nosave="0" type="boolean" notification="0">0</Parameter>
+      <Object name="WANConnectionDevice" data_size="0">
+        <Instance size="1" acl="ReadWrite" nosave="0" data_size="8">
+          <Parameter name="WANIPConnectionNumberOfEntries" acl="ReadOnly" nosave="0" type="unsignedInt" notification="1">1</Parameter>
+          <Parameter name="WANPPPConnectionNumberOfEntries" acl="ReadOnly" nosave="0" type="unsignedInt" notification="1">1</Parameter>
+          <Object name="WANIPConnection" data_size="0">
+            <Instance size="1" acl="ReadWrite" nosave="0" data_size="316">
+              <Parameter name="Enable" acl="ReadWrite" nosave="0" type="boolean" notification="0">1</Parameter>
+              <Parameter name="ConnectionStatus" acl="ReadOnly" nosave="1" type="string" notification="0">configured</Parameter>
+              <Parameter name="PossibleConnectionTypes" acl="ReadOnly" nosave="1" type="string" notification="0">aaaaaaaa</Parameter>
+              <Parameter name="connectionType" acl="ReadWrite" nosave="0" type="string" notification="0">bbbbbb</Parameter>
+              <Parameter name="Name" acl="ReadWrite" nosave="0" type="string" maxLength="256" notification="0">ddddd</Parameter>
+            </Instance>
+          </Object>
+        </Instance>
+      </Object>
+    </Instance>
+  </Object>
+</Object>  

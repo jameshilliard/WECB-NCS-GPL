@@ -1,0 +1,37 @@
+1)Please read following files carefully.
+"include/libtr69_client.h"
+"include/libtr69_server.h"
+"include/tr69_func.h" 
+"framework/tr69_func/libtr69_func.h" 
+  
+
+2)Following files is automatically created by framework/tr69_build. 
+"include/tr69_func.h"
+"include/tr69_inst.h"
+"include/tr69_st.h"
+"framework/tr69_func/tr69_func_igd.c"
+"framework/tr69_func/tr69_func_vendor_cfg.c"
+"framework/tr69_func/tr69_func_dev_cfg.c"
+"framework/tr69_func/tr69_func_mngr.c"
+"framework/tr69_func/tr69_func_time.c"
+"framework/tr69_func/tr69_func_ping.c"
+"framework/tr69_func/tr69_func_lan.c"
+"framework/tr69_func/tr69_func_lan_host_cfg.c"
+"framework/tr69_func/tr69_func_lan_host_iptf.c"
+"framework/tr69_func/tr69_func_lan_eth_cfg.c"
+"framework/tr69_func/tr69_func_lan_eth_stat.c"
+"framework/tr69_func/tr69_func_lan_hosts.c"
+"framework/tr69_func/tr69_func_lan_hosts.c"
+"framework/tr69_func/tr69_func_wan.c"
+"framework/tr69_func/tr69_func_wan_itf.c"
+"framework/tr69_func/tr69_func_wan_conn_dev.c"
+"framework/tr69_func/tr69_func_wan_conn_ip.c"
+"framework/tr69_func/tr69_func_wan_conn_ip_pmap.c"
+"framework/tr69_func/tr69_func_wan_conn_ppp.c"
+"framework/tr69_func/tr69_func_wan_conn_ppp_pmap.c"
+
+
+3)The file "framework/tr69_build/auto_patch"  can be used with "patch -p1 -f < ../tr69_build/auto_patch"  to update the func files in tr69_func directory when you changed the protype.xml. 
+
+
+4) Be notice the cfg.xml will be new created as well when protype.xml changed. You may manually rewrite the cfg.xml to set proper values of it. 
